@@ -1,0 +1,5 @@
+**/target
+**/protoc3
+**/node_modules
+**/rpc-rust
+**/*.csv

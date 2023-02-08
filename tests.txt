@@ -1,0 +1,225 @@
+// rs-server with concurrency in ws
+Handle Client time (avg):  24.9375
+Rpc Client (avg):  15.782
+Rpc Port (avg):  3.439
+Request time (avg):  5.6107
+
+// rs-server without concurrency in ws
+Handle Client time (avg):  26.6195
+Rpc Client (avg):  23.4714
+Rpc Port (avg):  1.0835
+Request time (avg):  1.9417
+
+
+// ts-server - 1 
+Handle Client time (avg):  29.3942
+Rpc Client (avg):  19.8329
+Rpc Port (avg):  3.5445
+Request time (avg):  5.879
+
+// ts-server - 2
+Handle Client time (avg):  28.6576
+Rpc Client (avg):  18.8701
+Rpc Port (avg):  3.5738
+Request time (avg):  6.1001
+
+** NEW COMPLETE **
+
+//ts-server 
+Handle Client time (mean):  26.5942
+Rpc Client (mean):  16.9865
+Rpc Port (mean):  3.4714
+Request time (mean):  6.0347
+Handle Client time (min):  11
+Rpc Client (min):  8
+Rpc Port (min):  0
+Request time (min):  1
+Handle Client time (max):  58
+Rpc Client (max):  30
+Rpc Port (max):  21
+Request time (max):  18
+Percentiles:  { '50': 6, '75': 7, '85': 8, '95': 9, '98': 12, '100': 18 }
+
+//rs-server
+Handle Client time (mean):  22.7557
+Rpc Client (mean):  19.7527
+Rpc Port (mean):  1.0415
+Request time (mean):  1.8612
+Handle Client time (min):  9
+Rpc Client (min):  8
+Rpc Port (min):  0
+Request time (min):  0
+Handle Client time (max):  53
+Rpc Client (max):  29
+Rpc Port (max):  19
+Request time (max):  22
+Percentiles:  { '50': 1, '75': 2, '85': 2, '95': 5, '98': 6, '100': 22 }
+
+//rs-server Lorem (not dockerized)
+Total Requests: 10000
+Total test duration:  85.848
+Request / Second:  116.48495014444134
+Handle Client time (mean):  320.7286
+Rpc Client (mean):  86.1104
+Rpc Port (mean):  21.2276
+Request time (mean):  213.2664
+Handle Client time (min):  23
+Rpc Client (min):  10
+Rpc Port (min):  0
+Request time (min):  11
+Handle Client time (max):  638
+Rpc Client (max):  284
+Rpc Port (max):  247
+Request time (max):  564
+Percentiles:  { '50': 194, '75': 324, '85': 352, '95': 442, '98': 473, '100': 564 }
+
+//ts-server Lorem (not dockerized)
+Total Requests: 10000
+Total test duration:  91.874
+Request / Second:  108.84472211942443
+Handle Client time (mean):  389.1972
+Rpc Client (mean):  24.0321
+Rpc Port (mean):  8.6929
+Request time (mean):  356.2884
+Handle Client time (min):  43
+Rpc Client (min):  6
+Rpc Port (min):  0
+Request time (min):  12
+Handle Client time (max):  738
+Rpc Client (max):  40
+Rpc Port (max):  223
+Request time (max):  707
+Percentiles:  { '50': 359, '75': 486, '85': 510, '95': 594, '98': 615, '100': 707 }
+
+//rs-server + Lorem (dockerized)
+Total test duration:  608.864
+Request / Second:  16.424029011404844
+Handle Client time (mean):  5461.8525
+Rpc Client (mean):  53.9812
+Rpc Port (mean):  17.2369
+Request time (mean):  5390.3581
+Handle Client time (min):  2739
+Rpc Client (min):  15
+Rpc Port (min):  2
+Request time (min):  2679
+Handle Client time (max):  6821
+Rpc Client (max):  447
+Rpc Port (max):  228
+Request time (max):  6736
+Percentiles:  {
+  '50': 5435,
+  '75': 5698,
+  '85': 5758,
+  '95': 6115,
+  '98': 6335,
+  '100': 6736
+}
+
+//ts-server + Lorem (dockerized)
+Total test duration:  670.506
+Request / Second:  14.914109642568448
+Handle Client time (mean):  5955.0942
+Rpc Client (mean):  69.1609
+Rpc Port (mean):  45.1915
+Request time (mean):  5840.4905
+Handle Client time (min):  189
+Rpc Client (min):  16
+Rpc Port (min):  2
+Request time (min):  139
+Handle Client time (max):  10801
+Rpc Client (max):  512
+Rpc Port (max):  767
+Request time (max):  10630
+Percentiles:  {
+  '50': 5814,
+  '75': 6181,
+  '85': 6282,
+  '95': 7823,
+  '98': 9119,
+  '100': 10630
+}
+
+//rs-server + Lorem + release mode
+Total test duration:  87.933
+Request / Second:  113.72294815370793
+Handle Client time (mean):  334.5319
+Rpc Client (mean):  26.7934
+Rpc Port (mean):  34.1236
+Request time (mean):  273.419
+Handle Client time (min):  38
+Rpc Client (min):  9
+Rpc Port (min):  0
+Request time (min):  13
+Handle Client time (max):  653
+Rpc Client (max):  390
+Rpc Port (max):  375
+Request time (max):  624
+Percentiles:  { '50': 265, '75': 388, '85': 415, '95': 523, '98': 556, '100': 624 }
+
+//ts-server + Lorem + after release test
+Total test duration:  91.799
+Request / Second:  108.9336485146897
+Handle Client time (mean):  389.5614
+Rpc Client (mean):  24.0519
+Rpc Port (mean):  7.2719
+Request time (mean):  358.0503
+Handle Client time (min):  47
+Rpc Client (min):  10
+Rpc Port (min):  0
+Request time (min):  13
+Handle Client time (max):  695
+Rpc Client (max):  51
+Rpc Port (max):  80
+Request time (max):  661
+Percentiles:  { '50': 357, '75': 489, '85': 514, '95': 597, '98': 616, '100': 661 }
+
+//rs-server + Lorem + Debug (after release)
+Total test duration:  87.79
+Request / Second:  113.9081899988609
+Handle Client time (mean):  335.5004
+Rpc Client (mean):  85.281
+Rpc Port (mean):  19.6585
+Request time (mean):  230.3732
+Handle Client time (min):  29
+Rpc Client (min):  15
+Rpc Port (min):  0
+Request time (min):  8
+Handle Client time (max):  650
+Rpc Client (max):  265
+Rpc Port (max):  399
+Request time (max):  590
+Percentiles:  { '50': 215, '75': 350, '85': 379, '95': 470, '98': 498, '100': 590 }
+
+//rs-server + Lorem + Release mode again (after first release mdoe ran)
+Total test duration:  87.763
+Request / Second:  113.94323348107972
+Handle Client time (mean):  334.7393
+Rpc Client (mean):  26.7522
+Rpc Port (mean):  47.9968
+Request time (mean):  259.789
+Handle Client time (min):  34
+Rpc Client (min):  12
+Rpc Port (min):  0
+Request time (min):  11
+Handle Client time (max):  641
+Rpc Client (max):  204
+Rpc Port (max):  360
+Request time (max):  594
+Percentiles:  { '50': 254, '75': 362, '85': 386, '95': 488, '98': 526, '100': 594 }
+
+//rs-server + Lorem + Debug mode again (after releases ops)
+Total test duration:  87.249
+Request / Second:  114.61449414893008
+Handle Client time (mean):  332.7082
+Rpc Client (mean):  90.251
+Rpc Port (mean):  17.3966
+Request time (mean):  224.8889
+Handle Client time (min):  28
+Rpc Client (min):  14
+Rpc Port (min):  0
+Request time (min):  10
+Handle Client time (max):  639
+Rpc Client (max):  208
+Rpc Port (max):  336
+Request time (max):  584
+Percentiles:  { '50': 209, '75': 342, '85': 370, '95': 457, '98': 483, '100': 584 }

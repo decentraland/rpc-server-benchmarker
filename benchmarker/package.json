@@ -1,0 +1,23 @@
+{
+  "name": "benchmarker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dcl/rpc": "^1.1.1",
+    "elapsed-time-util": "^0.1.5",
+    "mathjs": "^11.5.1",
+    "minimist": "^1.2.7",
+    "percentile": "^1.6.0",
+    "ws": "^8.12.0"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/ws": "^8.5.4"
+  }
+}
