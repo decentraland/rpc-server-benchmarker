@@ -61,3 +61,7 @@ Rpc Port (max):  {NUMBER}
 Request time (max):  {NUMBER}
 Percentiles:  { '50': {NUMBER}, '75': {NUMBER}, '85': {NUMBER}, '95': {NUMBER}, '98': {NUMBER}, '100': {NUMBER} }
 ```
+
+## TODO: 
+- [ ] Adds a benchmarker-rs with the `RpcClient` written in Rust
+- [ ] Adds C# implementation for benchmarking
