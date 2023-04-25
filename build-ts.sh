@@ -4,4 +4,4 @@
 		--ts_proto_out="$(pwd)/ts-server" -I="$(pwd)" \
 		"$(pwd)/api.proto"
 
-cp $(pwd)/ts-server/api.ts $(pwd)/benchmarker/api.ts
+cp $(pwd)/ts-server/api.ts $(pwd)/benchmarker-ts/api.ts

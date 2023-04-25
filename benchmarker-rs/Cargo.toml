@@ -1,5 +1,5 @@
 [package]
-name = "rs-server"
+name = "benchmarker-rs"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,8 +7,9 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1.25.0", features = ["full"] }
-async-trait = "0.1.57"
 prost = "0.11.5"
+async-trait = "0.1.57"
+streaming-stats = "0.2.3"
 dcl-rpc = "1.0.0"
 
 

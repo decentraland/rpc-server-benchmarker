@@ -1,8 +1,10 @@
-use rpc_rust::{
+use std::sync::Arc;
+
+use dcl_rpc::{
     server::{RpcServer, RpcServerPort},
     transports::web_socket::{WebSocketServer, WebSocketTransport},
 };
-use rs_server::{codegen::server::BookServiceCodeGen, service::book_service, AppContext, Book};
+use rs_server::{service::book_service, AppContext, Book, BookServiceRegistration};
 use tokio::fs;
 
 #[tokio::main]
@@ -14,13 +16,13 @@ async fn main() {
     };
     let mut server = RpcServer::create(ctx);
     server.set_handler(|port: &mut RpcServerPort<AppContext>| {
-        BookServiceCodeGen::register_service(port, book_service::BookService {})
+        BookServiceRegistration::register_service(port, book_service::BookService {})
     });
     let server_events_sender = server.get_server_events_sender();
     tokio::spawn(async move {
         while let Some(Ok(socket)) = on_connection_listener.recv().await {
             server_events_sender
-                .send_attach_transport(WebSocketTransport::new(socket))
+                .send_attach_transport(Arc::new(WebSocketTransport::new(socket)))
                 .unwrap();
         }
     });

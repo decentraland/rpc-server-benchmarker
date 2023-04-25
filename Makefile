@@ -34,23 +34,27 @@ build-ts: install_compiler
 
 
 build-rs:
-#clone because not a crate yet	
-	-@cd rs-server && git clone git@github.com:decentraland/rpc-rust.git 
 	@cd rs-server && cargo build
+
+run-rs:
+	@cd rs-server && cargo run &
+	sleep 8;
+	@cd benchmarker-rs && cargo run
 
 ab:
 ifdef n
 ifdef c
 ifdef server
 ifeq ($(server), rs)
-	@cd rs-server && cargo run &
-	sleep 5;
-	@cd benchmarker && npx ts-node index.ts -n $(n) -c $(c) -r server-$(server)-$(n)-$(c)
-	-@ps aux | grep "cargo run" | awk '{print $$2}' | tail -1 | xargs kill -9 
+	@cd rs-server && cargo build && cargo run &
+	sleep 8;
+	@cd benchmarker-ts && npx ts-node index.ts -n $(n) -c $(c) -r server-$(server)-$(n)-$(c)
+	@ps aux | grep "cargo run" | awk '{print $$2}' | tail -1 | xargs kill -9 
 else
 	@cd ts-server && npx ts-node index.ts &
-	@cd benchmarker && npx ts-node index.ts -n $(n) -c $(c) -r server-$(server)-$(n)-$(c)
-	-@ps aux | grep "npx ts-node" | awk '{print $$2}' | tail -1 | xargs kill -9 
+	sleep 8;
+	@cd benchmarker-ts && npx ts-node index.ts -n $(n) -c $(c) -r server-$(server)-$(n)-$(c)
+	@ps aux | grep "npx ts-node" | awk '{print $$2}' | tail -1 | xargs kill -9 
 endif
 else
 	@echo "Error: Server to run not defined"

@@ -223,3 +223,32 @@ Rpc Client (max):  208
 Rpc Port (max):  336
 Request time (max):  584
 Percentiles:  { '50': 209, '75': 342, '85': 370, '95': 457, '98': 483, '100': 584 }
+
+// rs-server + rs-client 
+Test duration: 70.725
+Entire Connection (mean) 255
+Client Connetion (mean) 15
+Port Creation (mean) 19
+Request (mean) 169
+
+Total test duration:  87.713
+Request / Second:  114.00818578773956
+Handle Client time (mean):  332.1176
+Rpc Client (mean):  59.9504
+Rpc Port (mean):  51.4117
+Request time (mean):  220.5655
+Handle Client time (min):  33
+Rpc Client (min):  8
+Rpc Port (min):  0
+Request time (min):  9
+Handle Client time (max):  653
+Rpc Client (max):  288
+Rpc Port (max):  285
+Request time (max):  602
+Percentiles:  { '50': 208, '75': 308, '85': 330, '95': 427, '98': 471, '100': 602 }
+
+Test duration: 69
+Entire Connection (mean) 249
+Client Connetion (mean) 17
+Port Creation (mean) 20
+Request (mean) 153
